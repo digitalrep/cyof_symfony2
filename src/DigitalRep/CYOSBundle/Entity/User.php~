@@ -1,0 +1,161 @@
+<?php
+
+namespace DigitalRep\CYOSBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+
+ /**
+  * @ORM\Entity
+  * @ORM\Table(name="user")
+  */
+class User implements UserInterface
+{
+   /**
+    * @ORM\Column(type="integer")
+	* @ORM\Id
+	* @ORM\GeneratedValue(strategy="AUTO")
+	*/
+    private $id;
+	
+   /**
+    * @ORM\Column(type="string", length=255)
+	*/
+    private $username;
+	
+   /**
+    * @ORM\Column(type="string", length=255)
+	*/
+    private $password;
+	
+   /**
+    * @ORM\ManyToMany(targetEntity="Page")
+    */
+    protected $pages;
+	
+	public function __construct()
+	{
+		$this->pages = new ArrayCollection();
+	}
+	
+   /**
+    * Get id
+    *
+    * @return integer
+    */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+   /**
+    * Set username
+    *
+    * @param $username
+    * @return User
+    */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+        return $this;
+    }
+
+   /**
+    * Get username
+    *
+    * @return string
+    */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+   /**
+    * Set password
+    *
+    * @param $password
+    * @return User
+    */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+        return $this;
+    }
+	
+   /**
+    * Get pages
+    *
+    * @return string 
+    */
+    public function getPages()
+    {
+        return $this->pages;
+    }
+	
+   /**
+    * Add page
+    * @param \DigitalRep\CYOSBundle\Entity\Page $pages
+    * @return Story
+    */
+    public function addPage($page)
+    {
+        $this->pages[] = $page;
+        return $this;
+    }
+	
+    /**
+     * Remove pages
+     *
+     * @param \DigitalRep\CYOSBundle\Entity\Page $pages
+     */
+    public function removePage(\DigitalRep\CYOSBundle\Entity\Page $pages)
+    {
+        $this->pages->removeElement($pages);
+    }
+
+   /**
+    * Get password
+    *
+    * @return string
+    */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+	
+   /**
+    * Get roles
+    *
+    * @return array
+    */
+	public function getRoles()
+	{
+		return array('ROLE_ADMIN');
+	}
+	
+   /**
+    * Get salt
+    *
+    * @return null
+    */
+	public function getSalt()
+	{
+		return null;
+	}
+	
+   /**
+    * Erase Credentials
+    *
+    */
+	public function eraseCredentials() { }
+	
+   /**
+    * Equals
+    *
+    * @return boolean
+    */
+	public function equals(UserInterface $user)
+	{
+		return $user->getUsername() == $this->getUsername();
+	}
+}

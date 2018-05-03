@@ -1,0 +1,7 @@
+parameters:
+#    digital_rep_authors.example.class: DigitalRep\AuthorsBundle\Example
+
+services:
+#    digital_rep_authors.example:
+#        class: %digital_rep_authors.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

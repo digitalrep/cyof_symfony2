@@ -1,0 +1,25 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page">
+		<div class="page_num">
+			Choose Your Own Story
+			<div id="page_toc">
+			</div>
+		</div>
+		<h1>Register:</h1>
+		<div id="options">
+			<p>{{ form(form) }}</p>
+			<p><a href="{{ path('homepage') }}">Return to Homepage</a></p>
+		</div>
+		<div id="image">
+			<p>&nbsp;</p>
+			<p align="right">
+				<img width="80%" src="{{ asset('bundles/digitalrepcyos/images/books.png') }}" />
+			</p>
+		</div>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+security:
+    encoders:
+        DigitalRep\CYOSBundle\Entity\User:
+            algorithm: sha512
+    firewalls:
+        wsse_secured:
+            pattern: ^/api/.*
+            stateless: true
+            wsse: true
+            anonymous: true
+        secured_area:
+            pattern:  ^/
+            anonymous: ~
+            form_login:
+                check_path: /login_check
+                login_path: /login
+            logout:
+                path: /logout
+                target: /
+    access_control:
+        - { path: ^/page, roles: ROLE_READER }
+        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+    providers:
+        main:
+            entity: 
+                class: DigitalRep\CYOSBundle\Entity\User

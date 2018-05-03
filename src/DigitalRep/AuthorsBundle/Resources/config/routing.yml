@@ -1,0 +1,3 @@
+digital_rep_authors_author:
+    resource: "@DigitalRepAuthorsBundle/Resources/config/routing/author.yml"
+    prefix:   /author

@@ -1,0 +1,3 @@
+hello_homepage:
+    pattern:  /fuckyou/{name}/{adjective}
+    defaults: { _controller: DigitalRepHelloBundle:FuckYou:index }

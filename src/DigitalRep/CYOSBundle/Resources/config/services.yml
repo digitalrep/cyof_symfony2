@@ -1,0 +1,12 @@
+parameters:
+#    digital_rep_cyos.example.class: DigitalRep\CYOSBundle\Example
+
+services:
+    wsse.security.authentication.provider:
+        class: DigitalRep\CYOSBundle\Security\Authentication\Provider\WsseProvider
+        arguments: ["", "%kernel.cache_dir%/security/nonces"]
+    wsse.security.authentication.listener:
+        class: DigitalRep\CYOSBundle\Security\Firewall\WsseListener
+        arguments: ["@security.context", "@security.authentication.manager", "@logger"]
+        tags: 
+            - { name: monolog.logger, channel: wsse }

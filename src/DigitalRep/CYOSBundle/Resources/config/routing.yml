@@ -1,0 +1,12 @@
+homepage:
+    path:     /
+    defaults: { _controller: DigitalRepCYOSBundle:Default:index }
+page:
+    path:     /page/{id}
+    defaults: { _controller: DigitalRepCYOSBundle:Default:page }
+admin:
+    path:     /admin
+    defaults: { _controller: DigitalRepCYOSBundle:Default:admin }
+toc:
+    path:     /toc
+    defaults: { _controller: DigitalRepCYOSBundle:Default:toc }

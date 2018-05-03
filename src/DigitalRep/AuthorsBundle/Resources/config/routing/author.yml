@@ -1,0 +1,20 @@
+author:
+    pattern:  /
+    defaults: { _controller: "DigitalRepAuthorsBundle:Author:index" }
+    requirements: { _method: get }
+author_show:
+    pattern:  /{id}
+    defaults: { _controller: "DigitalRepAuthorsBundle:Author:show" }
+    requirements: { _method: get }
+author_create:
+    pattern:  /
+    defaults: { _controller: "DigitalRepAuthorsBundle:Author:create" }
+    requirements: { _method: post }
+author_edit:
+    pattern:  /{id}
+    defaults: { _controller: "DigitalRepAuthorsBundle:Author:edit" }
+    requirements: { _method: put }
+author_delete:
+    pattern:  /{id}
+    defaults: { _controller: "DigitalRepAuthorsBundle:Author:delete" }
+    requirements: { _method: delete }

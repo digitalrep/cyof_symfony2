@@ -1,0 +1,29 @@
+[02-Jul-2014 11:50:20 America/Denver] PHP Warning:  Erroneous data format for unserializing 'DigitalRep\CYOSBundle\Entity\User' in /home1/faithnom/test/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php on line 869
+[02-Jul-2014 11:50:20 America/Denver] PHP Notice:  unserialize(): Error at offset 44 of 45 bytes in /home1/faithnom/test/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php on line 869
+[02-Jul-2014 11:50:20 America/Denver] PHP Fatal error:  __clone method called on non-object in /home1/faithnom/test/vendor/doctrine/orm/lib/Doctrine/ORM/Mapping/ClassMetadataInfo.php on line 872
+[04-Jul-2014 22:06:01 America/Denver] PHP Notice:  Undefined index: user in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 22:11:33 America/Denver] PHP Notice:  Undefined index: user in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 22:12:05 America/Denver] PHP Notice:  Undefined index: user in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 23:28:19 America/Denver] PHP Notice:  Undefined index: username in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 23:28:19 America/Denver] PHP Notice:  Undefined index: password in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 52
+[04-Jul-2014 23:28:19 America/Denver] PHP Notice:  Undefined index: email in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 53
+[04-Jul-2014 23:30:20 America/Denver] PHP Notice:  Undefined index: username in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 23:30:20 America/Denver] PHP Notice:  Undefined index: password in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 52
+[04-Jul-2014 23:30:20 America/Denver] PHP Notice:  Undefined index: email in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 53
+[04-Jul-2014 23:34:47 America/Denver] PHP Notice:  Undefined index: username in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[04-Jul-2014 23:34:47 America/Denver] PHP Notice:  Undefined index: password in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 52
+[04-Jul-2014 23:34:47 America/Denver] PHP Notice:  Undefined index: email in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 53
+[05-Jul-2014 04:41:39 America/Denver] PHP Notice:  Undefined index: username in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 51
+[05-Jul-2014 04:41:39 America/Denver] PHP Notice:  Undefined index: password in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 52
+[05-Jul-2014 04:41:39 America/Denver] PHP Notice:  Undefined index: email in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 53
+[05-Jul-2014 13:32:51 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:36:55 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:37:06 America/Denver] PHP Parse error:  syntax error, unexpected '=>' (T_DOUBLE_ARROW) in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:38:15 America/Denver] PHP Parse error:  syntax error, unexpected '=' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:43:02 America/Denver] PHP Parse error:  syntax error, unexpected '=' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:43:40 America/Denver] PHP Parse error:  syntax error, unexpected '=' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 92
+[05-Jul-2014 13:53:13 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 82
+[05-Jul-2014 13:54:12 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 82
+[05-Jul-2014 13:54:57 America/Denver] PHP Parse error:  syntax error, unexpected '{' in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 82
+[05-Jul-2014 15:33:00 America/Denver] PHP Fatal error:  Call to a member function toArray() on a non-object in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 165
+[05-Jul-2014 15:33:25 America/Denver] PHP Fatal error:  Call to a member function toArray() on a non-object in /home1/faithnom/test/src/DigitalRep/APIBundle/Controller/UsersController.php on line 165

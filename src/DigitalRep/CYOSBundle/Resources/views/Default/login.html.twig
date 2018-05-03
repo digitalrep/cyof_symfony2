@@ -1,0 +1,37 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page">
+		<div class="page_num">
+			Choose Your Own Story
+			<div id="page_toc">
+			</div>
+		</div>
+		<div id="page_contents">
+		<p>
+			<h1>Login:</h1>
+			{% if error is defined %}
+				{% if error %}
+					<div>{{ error.message }}</div>
+				{% endif %}
+			{% endif %}
+		</p>
+		<p>
+			<form method="POST" action="{{ path('user_login_check') }}">
+				{% if last_username is defined %}
+					<input type="text" name="_username" placeholder="Username" value="{{ last_username }}" required /><br/>
+				{% else %}
+					<input type="text" name="_username" placeholder="Username" required /><br/>
+				{% endif %}
+				<input type="password" name="_password" placeholder="Password"  /><br/>
+				<input type="hidden" name="_target_path" value="/page/0" />
+				<input type="submit" value="Begin" />
+			</form>
+		</p>
+		<p><a href="{{ path('homepage') }}">Return to Homepage</a></p>
+		</div>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>	
+	</div>
+{% endblock %}

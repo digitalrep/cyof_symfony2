@@ -1,0 +1,30 @@
+api_v2_get_users_id:
+    pattern:   /api/users
+    defaults:  { _controller: DigitalRepAPIBundle:Users:getUser } 
+    requirements:
+        _method: GET
+        _format: JSON
+api_v2_post_users_id:
+    pattern:   /users
+    defaults:  { _controller: DigitalRepAPIBundle:Users:postUsers } 
+    requirements:
+        _method: POST
+        _format: JSON
+api_v2_put_user:
+    pattern:   /api/users
+    defaults:  { _controller: DigitalRepAPIBundle:Users:putUser } 
+    requirements:
+        _method: PUT
+        _format: JSON
+api_v2_delete_user:
+    pattern:   /api/users
+    defaults:  { _controller: DigitalRepAPIBundle:Users:deleteUser } 
+    requirements:
+        _method: DELETE
+        _format: JSON
+debug:
+    pattern:   /users
+    defaults:  { _controller: DigitalRepAPIBundle:Users:debug } 
+    requirements:
+        _method: GET
+        _format: JSON

@@ -1,0 +1,13 @@
+user_login:
+    path:     /login
+    defaults: { _controller: DigitalRepUsersBundle:Default:login }
+user_login_check:
+    path:     /login_check
+user_logout:
+    path:     /logout
+user_register:
+    path:     /register
+    defaults: { _controller: DigitalRepUsersBundle:Default:register }
+user_create: 
+    path:     /create
+    defaults: { _controller: DigitalRepUsersBundle:Default:create }

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<meta charset=UTF-8>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html"	charset=utf-8" />
+	<title>{% block title %} StoreBundle {% endblock %}</title>
+	{% block stylesheets %}
+	  <link href="{{ asset('bundles/digitalrepcyos/css/style.css') }}" rel="stylesheet" />
+	{% endblock %}
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+  </head>
+  <body>
+    <div id="content">
+	  {% block body %}
+	  {% endblock %}
+	  {% block javascripts %}
+	    <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	    <script type='text/javascript' src="{{ asset('bundles/digitalrepcyos/js/script.js') }}"></script>
+ 	  {% endblock %}
+	</div>
+  </body>
+</html>

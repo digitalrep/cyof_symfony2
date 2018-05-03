@@ -1,0 +1,53 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page" class="page">
+		<div class="page_num">
+			{{ app.user.username }}
+			<div id="page_toc">
+				Page {{ page.id }}
+			</div>
+		</div>
+		<h1>{{ page.title }}</h1>
+		<div id="page_contents">
+			{{ page.contents | raw }}
+			<div id="next_options">
+				<p align="center">
+				{% if (page.nexts is not defined) or (page.nexts is empty) %}
+				{% else %}
+					{% for next in page.nexts %}
+						<a href="{{ path('page', {'id': next.id}) }}">{{next.title}}</a><br/>
+					{% endfor %}
+				{% endif %}
+				</p>
+			</div>	
+		</div>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>	
+	</div>
+	<div id="toc">
+		<div class="page_num toc">
+			<a href="{{ path('homepage') }}">Homepage</a>
+			<div id="page_toc">
+				Progress
+			</div>
+		</div>
+		<h1>The Story so Far:</h1>
+		{% if (prevs is not defined) or (prevs is empty) %}	 
+		{% else %}
+		<div id="storytable">
+			<table>
+			{% for prev in prevs %}
+				<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+					<td><a href="{{ path('page', {'id': prev.id}) }}">{{prev.title}}</a></td>
+					<td align="right">{{prev.id}}</td>
+				</tr>
+			{% endfor %}
+		{% endif %}
+			</table>
+		</div>
+		<div id="footer">
+		</div>
+	</div>	
+{% endblock %}

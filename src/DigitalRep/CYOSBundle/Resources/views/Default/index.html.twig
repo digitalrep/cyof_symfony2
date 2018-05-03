@@ -1,0 +1,67 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page">
+		<div class="page_num">
+			Homepage
+			<div id="page_toc">
+			</div>
+		</div>
+		<h1>Choose Your Own Story</h1>
+		<div id="options">
+			{% if app.user.username is defined %}
+				<h2>Welcome back, {{ app.user.username }}!</h2>
+				<p>&nbsp;</p>
+				{% if is_granted('ROLE_ADMIN') %}
+					<p><a href="{{ path('admin') }}">Admin</a></p>
+				{% endif %}
+				<p><a href="{{ path('page', {'id':0}) }}">Continue Story</a></p>
+				<p><a href="{{ path('user_logout') }}">Logout</a></p>
+			{% else %}
+				<h2>Login to continue your story:</h2>
+				<p>
+					<form method="POST" action="{{ path('user_login_check') }}">
+						<input type="text" name="_username" placeholder="Username" required /><br/>
+						<input type="password" name="_password" placeholder="Password"  /><br/>
+						<input type="hidden" name="_target_path" value="/page/0" />
+						<input type="submit" value="Begin" />
+					</form>
+				</p>
+				<p><a href="{{ path('user_register') }}">Register to Start a New Story</a></p>
+			{% endif %}
+		</div>
+		<div id="image">
+			<p align="right">
+				<img width="80%" src="{{ asset('bundles/digitalrepcyos/images/books.png') }}" />
+			</p>
+		</div>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>	
+	</div>
+	<div id="toc">
+		<div class="page_num toc">
+			&nbsp;
+			<div id="page_toc">
+				The Story So Far
+			</div>
+		</div>
+		{% if app.user.username is defined %}
+		<h1>The Story so Far:</h1>
+		<div id="storytable">
+			<table>
+			{% for p in pages %}
+				<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+					<td><a href="{{ path('page', {'id': p.id}) }}">{{ p.title }}</a></td>
+					<td align="right">{{ p.id }}</td>
+				</tr>
+			{% endfor %}
+			</table>
+		</div>
+		{% else %}
+			<div id="filler">&nbsp;</div>
+		{% endif %}
+		<div id="footer">
+		</div>
+	</div>
+{% endblock %}

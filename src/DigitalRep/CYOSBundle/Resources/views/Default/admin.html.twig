@@ -1,0 +1,27 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page">
+		<div class="page_num">
+			Choose Your Own Story
+			<div id="page_toc">
+			</div>
+		</div>
+		<div id="page_contents">
+			<h1>Administration</h1>
+			<h2>Users' Progress:</h2>
+			<p>
+			{% for u in users %}
+				<h3>{{u.id}} - {{ u.username }}</h3>
+				{% for p in u.pages %}
+					{{ p.title }} -
+				{% endfor %}
+			{% endfor %}
+			</p>
+			<p><a href="{{ path('homepage') }}">Return to Homepage</a></p>
+		</div>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>	
+	</div>
+{% endblock %}

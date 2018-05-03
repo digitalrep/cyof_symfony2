@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+{% block title %} Choose Your Own Story {% endblock %}
+{% block body %}
+	<div id="page">
+		<div class="page_num">
+			Choose Your Own Story
+			<div id="page_toc">
+				<a href="http://localhost/symfonyapp/web/app_dev.php/">Homepage</a>
+			</div>
+		</div>
+		<h1>Table of Contents</h1>
+		<table>
+		{% for page in pages %}
+			<tr class="{{ cycle(['odd', 'even'], loop.index) }}">
+				<td><a href="{{ path('page', {'id': page.id}) }}">{{page.title}}</a></td>
+				<td align="right">{{page.id}}</td>
+			</tr>
+		{% endfor %}
+		</table>
+		<div id="footer">
+			All written material on this website Copyright &copy;2014 <a href="http://www.digitalrep.info">DigitalRep</a>
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+digital_rep_users:
+    resource: "@DigitalRepUsersBundle/Resources/config/routing.yml"
+    prefix:   /
+digital_rep_api:
+    resource: "@DigitalRepAPIBundle/Resources/config/routing.yml"
+    prefix:   /
+digital_rep_authors:
+    resource: "@DigitalRepAuthorsBundle/Resources/config/routing.yml"
+    prefix:   /
+digital_rep_cyos:
+    resource: "@DigitalRepCYOSBundle/Resources/config/routing.yml"
+    prefix:   / 
+acme:
+    resource: "@DigitalRepHelloBundle/Resources/config/routing.yml"
+    prefix:   /
